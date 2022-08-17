@@ -1,0 +1,202 @@
+<html>
+  <body>
+    <mat-sidenav-container class="sidenav-container">
+      <mat-sidenav
+        #drawer
+        class="sidenav"
+        fixedInViewport
+        [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+        [mode]="(isHandset$ | async) ? 'over' : 'side'"
+        [opened]="(isHandset$ | async) === false"
+      >
+        <mat-toolbar class="colors">
+       </mat-toolbar >
+        <mat-nav-list>
+          <a mat-list routerLink="#"> </a>
+    
+          <a mat-list-item routerLink="/inicio" 
+            ><i class="material-icons">&#xE88A;</i> Inicio</a
+          >
+    
+          <a mat-list-item routerLink="#"
+            ><span class="material-icons"> event_seat </span> Reservas</a
+          >
+    
+          <a mat-list-item routerLink="/servicios"
+            ><span class="material-icons"> room_service </span>Servicios</a
+          >
+    
+          <a mat-list-item routerLink="#"
+            ><span class="material-icons"> attach_money </span> Facturación</a
+          >
+    
+          <a mat-list-item routerLink="/habitaciones"
+            ><span class="material-icons"> bed </span>Habitación</a
+          >
+    
+          <a mat-list-item routerLink="/empleados">
+            <span class="material-icons"> person </span>Empleado</a
+          >
+    
+          <a mat-list-item routerLink="/cargos"
+            ><span class="material-icons"> work_outline </span>Cargo</a
+          >
+    
+          <a mat-list-item routerLink="/departamentos"
+            ><span class="material-icons"> assignment </span>Departamento</a
+          >
+    
+          <a mat-list-item routerLink="/users"
+            ><span class="material-icons"> account_circle </span>Usuarios</a
+          >
+    
+        </mat-nav-list>
+        <mat-toolbar class="colorico"> </mat-toolbar>
+        <mat-toolbar class="colorico"> </mat-toolbar>
+      </mat-sidenav>
+    
+      <mat-sidenav-content>
+        <mat-toolbar class="colors">
+          <button
+            type="button"
+            aria-label="Toggle sidenav"
+            mat-icon-button
+            (click)="drawer.toggle()"
+          >
+      <span><span class="material-icons">
+    menu
+    </span></span>
+      <span class="example-spacer"></span>
+          </button>
+          <span class="fill-remaining-space"> </span>
+          <span >   
+      <a mat-button href="/" 
+      target="_blank"><span class="material-icons">
+    logout
+    </span>Salir</a>
+    
+    </span>
+        </mat-toolbar>
+        <h2>Inicio</h2>
+
+        <div class="row">
+          <div class="col-md-1"></div>
+          <div class="col-md-3">
+            <div class="card card-stats">
+              <div class="card-header card-header-warning card-header-icon">
+                <div class="card-icon">
+                  <span class="material-icons"> grade </span>
+                </div>
+                <h2 class="card-category">Total Habitaciones</h2>
+                <h1 class="card-title">18</h1>
+              </div>
+            </div>
+          </div>
+      
+          <div class="col-md-3">
+            <div class="card card-stats">
+              <div class="card-header card-header-warning card-header-icon">
+                <div class="card-icon">
+                  <span class="material-icons"> light_mode </span>
+                </div>
+                <h2 class="card-category">Hab. Disponibles</h2>
+                <h1 class="card-title">12</h1>
+              </div>
+            </div>
+          </div>
+      
+          <div class="col-md-3">
+            <div class="card card-stats">
+              <div class="card-header card-header-success card-header-icon">
+                <div class="card-icon">
+                  <span class="material-icons"> dark_mode </span>
+                </div>
+                <h2 class="card-category">Hab. Ocupadas</h2>
+                <h1 class="card-title">6</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <br />
+        <br />
+        <!--Tabla-->
+        <div class="row">
+          <div class="col-md-1"></div>
+          <div class="col-md-9">
+            <div class="cards">
+              <div class="card-header card-header-warning">
+                <h2 class="card-titles">Información de habitaciones ocupadas</h2>
+              </div>
+              <div class="card-content table-responsive table-full-width">
+                <table class="table table-striped">
+                  <thead class="thead-dark">
+                    <th>N°</th>
+                    <th>Cliente</th>
+                    <th>Habitación</th>
+                    <th>Tipo</th>
+                    <th>Fecha Ingreso</th>
+                    <th>Hora Ingreso</th>
+                  </thead>
+      
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>Dakota Facturati</td>
+                      <td>101</td>
+                      <td>Doble</td>
+                      <td>10-05-22</td>
+                      <td>15:25</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>Benito Flores</td>
+                      <td>203</td>
+                      <td>Individual</td>
+                      <td>11-05-22</td>
+                      <td>17:27</td>
+                    </tr>
+                    <tr>
+                      <td>5</td>
+                      <td>Alma Rosa Paredes</td>
+                      <td>103</td>
+                      <td>Doble</td>
+                      <td>09-05-22</td>
+                      <td>22:36</td>
+                    </tr>
+                    <tr>
+                      <td>13</td>
+                      <td>Marinette Dupaing-Cheng</td>
+                      <td>203</td>
+                      <td>Doble</td>
+                      <td>11-05-22</td>
+                      <td>20:06</td>
+                    </tr>
+                    <tr>
+                      <td>14</td>
+                      <td>Adrien Agreste</td>
+                      <td>106</td>
+                      <td>individual</td>
+                      <td>08-05-22</td>
+                      <td>17:36</td>
+                    </tr>
+                    <tr>
+                      <td>16</td>
+                      <td>Luka Couffaine</td>
+                      <td>304</td>
+                      <td>Suite</td>
+                      <td>10-05-22</td>
+                      <td>15:05</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <router-outlet></router-outlet>
+      </mat-sidenav-content>
+    </mat-sidenav-container>
+
+  </body>
+</html>

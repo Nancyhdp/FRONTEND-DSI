@@ -1,0 +1,28 @@
+
+<form (ngSubmit)="onLogin()">
+  <section class="form-login">
+    <h5>Ingreso a Sistema</h5>
+      <input
+        type="text"
+        class="controls"
+        matInput
+        [(ngModel)]="input.username"
+        name="input.username"
+        placeholder="Usuario"
+      />
+      <input
+        type="password"
+        class="controls"
+        matInput
+        [(ngModel)]="input.password"
+        placeholder="Password"
+        name="input.password"
+      />
+  
+  <button class="boton" type="submit" (click)="onLogin()" mat-raised-button color="primary">Ingresar</button>
+
+  <p><a href="#">¿Olvidaste tu contraseña?</a></p>
+</section>
+</form>
+
+
